@@ -1,15 +1,27 @@
-/* #FFF1F1 */
-/* #FF6B6B */
-/* #6B7280 */
-/* #FEF9C3 */
-/* #CA8A04 */
-/* #DCFCE7 */
-/* #16A34A */
-/* #333333 */
-/* text- primary */
-/* #1F2937 */
-/* #3C4655 */
-/* #374151 */
+:root {
+    --primary-red: #ff6b6b;
+    --secondary-red: #fff1f1;
+    --primary-yellow: #ca8a04;
+    --secondary-yellow: #fef9c3;
+    --primary-green: #16a34a;
+    --secondary-green: #dcfce7;
+    --primary-gray: #1f2937;
+    --secondary-gray: #374151;
+    --light-grey: #f3f4f6;
+    --primary-text: #1f2937;
+    --secondary-text: #3c4655;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+@import "tailwindcss";
+
+body {
+    font-family: "Roboto", sans-serif;
+    box-sizing: border-box;
+}
+
+/* Colors */
 
 .text-primary {
     color: #1f2937;
@@ -17,4 +29,20 @@
 
 .text-secondary {
     color: #374151;
+}
+
+.text-red-primary {
+    color: #ff6b6b;
+}
+
+.text-red-secondary {
+    color: #fff1f1;
+}
+
+.bg-red-primary {
+    background-color: #ff6b6b;
+}
+
+.bg-red-secondary {
+    background-color: #fff1f1;
 }
