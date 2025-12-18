@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import "tailwindcss";
+
 :root {
     --primary-red: #ff6b6b;
     --secondary-red: #fff1f1;
@@ -12,37 +15,10 @@
     --secondary-text: #3c4655;
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
-
-@import "tailwindcss";
-
-body {
-    font-family: "Roboto", sans-serif;
+* {
     box-sizing: border-box;
 }
 
-/* Colors */
-
-.text-primary {
-    color: #1f2937;
-}
-
-.text-secondary {
-    color: #374151;
-}
-
-.text-red-primary {
-    color: #ff6b6b;
-}
-
-.text-red-secondary {
-    color: #fff1f1;
-}
-
-.bg-red-primary {
-    background-color: #ff6b6b;
-}
-
-.bg-red-secondary {
-    background-color: #fff1f1;
+body {
+    font-family: "Roboto", sans-serif;
 }
