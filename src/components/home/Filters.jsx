@@ -1,4 +1,11 @@
-const Filters = () => {
+const Filters = ({ categories, filters, onFilterChange }) => {
+    const handleCategoryChange = (categoryId) => {
+        onFilterChange({
+            ...filters,
+            categoryId: categoryId === filters.categoryId ? null : categoryId,
+        });
+    };
+
     return (
         <aside className="hidden md:block w-64 shrink-0">
             <div className="space-y-8">
@@ -9,31 +16,28 @@ const Filters = () => {
                         <li className="flex items-center gap-2">
                             <input
                                 type="checkbox"
-                                className="accent-(--primary-red) "
-                            />
-                            All Category
-                        </li>
-                        <li className="flex items-center gap-2">
-                            <input
-                                type="checkbox"
                                 className="accent-(--primary-red)"
+                                checked={!filters.categoryId}
+                                onChange={() => handleCategoryChange(null)}
                             />
-                            Men
+                            All Categories
                         </li>
-                        <li className="flex items-center gap-2">
-                            <input
-                                type="checkbox"
-                                className="accent-(--primary-red)"
-                            />
-                            Women
-                        </li>
-                        <li className="flex items-center gap-2">
-                            <input
-                                type="checkbox"
-                                className="accent-(--primary-red)"
-                            />
-                            Couple
-                        </li>
+                        {categories?.map((category) => (
+                            <li
+                                key={category.id}
+                                className="flex items-center gap-2"
+                            >
+                                <input
+                                    type="checkbox"
+                                    className="accent-(--primary-red)"
+                                    checked={filters.categoryId === category.id}
+                                    onChange={() =>
+                                        handleCategoryChange(category.id)
+                                    }
+                                />
+                                {category.name}
+                            </li>
+                        ))}
                     </ul>
                 </div>
 
